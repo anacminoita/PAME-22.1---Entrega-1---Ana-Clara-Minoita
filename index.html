@@ -9,12 +9,18 @@
         *{  box-sizing: border-box;
             margin: 0px;
             padding: 0px;
+            /* border: 1px solid red; */
         }
         #container{
             width:600px;
             height:550px;
             background-color: blueviolet;
         }
+        button {
+            cursor: pointer;
+        }
+
+        
         body{
             font-family: "netflix-font";
             display:flex;
@@ -26,8 +32,18 @@
         .top{
             width:600px;
             height:65%;
+            -webkit-box-shadow: inset 0px -50px 18px -1px #000000; 
+            box-shadow: inset 0px -100px 80px -1px rgb(26, 25, 25);
             background-image:url(./assets/FluxoEMPI.jpg);
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .div-btns {
+            display:flex;
+            flex-direction: row;
         }
         .bottom{
             width: 100%;
@@ -38,7 +54,7 @@
             
         }
         .left{
-            width: 70%;
+            width: 65%;
             height:100%;
             text-align: left;
             display: flex;
@@ -47,8 +63,9 @@
             align-items: flex-start;
         }
         .right{
-            width: 30%;
+            width: 35%;
             height: 100%;
+            padding: 10px;
         }
         #play{
             background-image: url(./assets/play.svg);
@@ -62,11 +79,12 @@
             padding: 3px 0 3px 25px;
         }
         .redondo{
-            width:40px;
-            height:40px;
+            width:35px;
+            height:35px;
             border-radius: 30px;
             border:1px solid grey;
             background-color: rgba(53, 51, 51, 0.767);
+            margin: 0 5px;
 
         }
         .plus{
@@ -83,11 +101,23 @@
             background-image: url(./assets/x.svg);
             background-repeat: no-repeat;
             background-position: center center;
+            position: relative; top: -315px; right: -330px;
         }
         .mute{
             background-image: url(./assets/mute.svg);
             background-repeat: no-repeat;
             background-position: center center;
+            position: relative; right: -280px;
+            bottom: 48px;
+        }
+
+        .play-margin{
+            margin-left: 28px;
+        }
+
+        .redondo-margin {
+            
+            margin-top: -50px;
         }
         .relevante{
             color: rgb(18, 75, 18);
@@ -120,11 +150,13 @@
         <div id="container">
             <div class="top">
                 <img src="./assets/LogoFluxo.png" height="200px" width="200px"/>
-                <button id="play"> Entrar</button>
-                <button class="redondo plus"></button>
-                <button class="redondo like"></button>
-                <button class="redondo close"></button>
-                <button class="redondo mute"></button>
+                <div class="div-btns">
+                    <button id="play" class="play-margin redondo-margin"> Entrar</button>
+                    <button class="redondo plus redondo-margin"></button>
+                    <button class="redondo like redondo-margin"></button>
+                    <button class="redondo close"></button>
+                    <button class="redondo mute"></button>
+                </div>
             
 
             </div>
